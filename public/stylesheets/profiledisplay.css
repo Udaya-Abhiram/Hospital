@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    text-align: center;
+    margin-top: 3%;
+}
+.font{
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	padding-top: 15px;
+	justify-content: space-around;
+}
+.container .card{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 15px;
+	border-radius: 2px solid black;
+	box-shadow: 0 0 7px rgba(0,0,0,0.8);
+    padding: 20px;
+    opacity: .6;
+}
+.back{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('/images/bg_image_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+span{
+    color: #232b38ab;
+}

@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h2{
+    margin-top: 1%;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+th{
+   text-align: center;
+   text-decoration: none;
+   font-family: 'Times New Roman', Times, serif; 
+   font-weight: bold;
+   font-size: 24px;
+}
+td{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}

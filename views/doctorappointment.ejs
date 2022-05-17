@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Reception</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> -->
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="/javascripts/angular.js"></script>
+  <link rel="stylesheet" href="/stylesheets/receptiondisplay.css">
+  <link rel="stylesheet" href="/stylesheets/maicons.css">
+
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+
+  <link rel="stylesheet" href="/stylesheets/owl.carousel.css">
+
+  <link rel="stylesheet" href="/stylesheets/animate.css">
+
+  <link rel="stylesheet" href="/stylesheets/themes.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body ng-app="myapp" ng-controller="mycntrl" ng-init="appointmentgetdata()">
+
+    <header>
+        <div class="topbar">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 text-sm">
+                <div class="site-info">
+                  <a href="#"><span class="fa-stack fa-lg">
+                    <i class="fa fa-phone fa-stack-1x"></i>
+                  </span> +00 123 4455 6666</a>
+                  <span class="divider">|</span>
+                  <a href="#"><span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                  </span> mail@example.com</a>
+                </div>
+              </div>
+              <div class="col-sm-4 text-right text-sm">
+                <div class="social-mini-button">
+                  <a href="#"><span class="class=fa-stack fa-lg"><i class="fa-brands fa-facebook-f"></i></span></a>
+                  <a href="#"><span class="class=fa-stack fa-lg"><i class="fa-brands fa-twitter"></i></span></a>
+                  <a href="#"><span class="class=fa-stack fa-lg"><i class="fa-brands fa-instagram"></i></span></a>
+                  <a href="#"><span class="class=fa-stack fa-lg"><i class="fa-solid fa-earth-asia"></i></span></a>
+                </div>
+              </div>
+            </div> <!-- .row -->
+          </div> <!-- .container -->
+        </div> <!-- .topbar -->
+    
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+          <div class="container">
+            <a class="navbar-brand" href="#"><span class="text-primary hea">One</span><span class="hea">-Health</span></a>
+    
+            <!-- <form action="#">
+              <div class="input-group input-navbar">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
+              </div>
+            </form> -->
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupport">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/docprofile">Home</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="about.html">About Us</a>
+                </li> -->
+                <li class="nav-item active">
+                  <a class="nav-link" href="/docappointment">Doctors</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="/logout">Logout</a>
+                </li> 
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="/logins">Contact</a>
+                </li> -->
+                <!-- <li class="nav-item">
+                  <a class="btn btn-primary ml-lg-3" href="/logins">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-primary ml-lg-3" href="/patientreg">Register</a>
+                </li> -->
+              </ul>
+            </div> <!-- .navbar-collapse -->
+          </div> <!-- .container -->
+        </nav>
+      </header>
+      <br>
+    
+<div class="container">
+  <h2 class="hea">Patients Data</h2>
+  <br>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Date</th>
+      <th>Email</th>
+      <th>Department</th>
+      <th>Number</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in appointmentdata">
+        <td >
+            <span>{{x.firstname}}</span>
+        </td>
+        <td >
+          <span>{{x.date}}</span>
+        </td>
+        <td >
+            <span>{{x.email}}</span>
+        </td>
+        <td >
+            <span>{{x.departement}}</span>
+        </td>
+        <td >
+            <span>{{x.num}}</span>
+        </td>
+        <!-- <td> 
+          <button class="btn btn-success" ng-hide={{x.Action!=undefinded}} ng-click="update(x)">Accept</button>
+          <button class="btn btn-success" ng-show={{x.Action!=undefinded}} ng-click="ng-disabled=disableBtn">Approved</button>
+
+         <button class="btn btn-success" ng-click="update(x)">{{x.Action}}</button> 
+  
+         <button class="btn btn-danger" ng-hide={{x.Action!=undefinded}} ng-click="hide=true;update1(x)">Reject</button> 
+         <button class="btn btn-danger" ng-show={{x.Action!=undefinded}} ng-click="ng-disabled=disableBtn">Rejected</button>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: medium;
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top:2%;
+}
+.hea{
+    font-size: large;
+}

@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h2{
+    text-align:center;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+button{
+    text-transform: uppercase;
+    color: black;
+}
+.container .card{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 15px;
+	border-radius: 12px solid black;
+	box-shadow: 0 0 7px rgba(0,0,0,0.8);
+    padding: 3%;
+}
+.but{
+    background-color: rgb(67, 179, 67) ;
+    color: white;
+    border-radius: 22px;
+}
+.but:hover{
+    background-color: white;
+    color: rgb(67, 179, 67) ;
+}

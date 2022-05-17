@@ -1,0 +1,158 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'Times New Roman', Times, serif;
+}
+body{
+    background: #333;
+	width: 100%;
+	height: 100vh;
+    flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	padding-top: 15px;
+	justify-content: space-around;
+}
+.container .card{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 15px;
+	text-align: center;
+	border-radius: 2px solid black;
+	box-shadow: 0 0 7px rgba(0,0,0,0.8);
+}
+.container .card .product-image{
+	width: 65%;
+	margin: 20px auto;
+}
+.container .card .product-image img:hover{
+	transform: scale(1.1);
+}
+.container .card .product-image img{
+	width: 100%;
+	transition: 0.4s;
+    object-fit: cover;
+    height: 300px;
+
+}
+.container .card .product-info h2{
+	font-size: 18px;
+	padding: 0 25px;
+	margin-bottom: 10px;
+    color: white;
+}
+.container .card .product-info p{
+    font-size: 18px;
+    color: white;
+}
+.end{
+    font-size: 12px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+h1{
+    color: white;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+/* nav{
+    height: 80px;
+    width: 100%;
+    background: #34495e;  
+}
+label.logo{
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    padding: 0px 100px;
+    line-height: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav li{
+    display: inline-block;
+    margin: 0px 8px;
+    line-height: 80px;
+    text-decoration: none;
+}
+nav a{
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 5px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+a.active,a:hover{
+    border: 1px solid white;
+    transition: .5s;
+    color:white;
+    text-decoration: none;
+    box-shadow: 0px 1px 1px 0px rgba(206, 197, 197, 0.795);
+
+}
+nav #icon{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    margin-right: 40px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+@media(max-width: 1048px){
+    label.logo{
+        font-size: 32px;
+        padding-left: 60px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size: 17px;
+    }
+}
+@media(max-width: 990px){
+    nav #icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2f3460;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all.5s;
+    }
+    nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav a{
+        font-size: 20px;
+    }
+    a.active,a:hover{
+        border: none;
+        color: #3498db;
+
+    }
+    nav ul.show{
+        left: 0;
+
+    }
+} */

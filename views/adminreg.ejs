@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/patientregister.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="/javascripts/angular.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="mycntrl" name="myForm" novalidate>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+                <h2>Admin Registration</h2>
+                <br>
+                <form class="card">
+                    <div class="form-group">
+                        <label for="firstname">FirstName</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Enter FirstName" name="firstname" ng-model="admin.firstname">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">LastName</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Enter LastName" name="lastname" ng-model="admin.lastname">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adminid">AdminID</label>
+                        <input type="text" class="form-control" id="adminid" placeholder="Enter AdminID" name="adminid" ng-model="admin.adminid">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" ng-model="admin.email">
+                    <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="pwd">Password</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" ng-model="admin.pwd">
+                    <!-- <span style="color:red" ng-show="myForm.pwd.$dirty && myForm.user.$invalid">
+                    <span ng-show="myForm.pwd.$error.required">Password is required.</span> -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpwd">Confirm Password</label>
+                        <input type="password" class="form-control" id="cpwd" placeholder="Enter password" name="cpwd" compare-to="pwd" ng-model="admin.cpwd">
+                        <!-- <span style="color:red" ng-show="myForm.cpwd.$dirty && myForm.cpwd.$invalid">
+                        <span ng-show="myForm.cpwd.$error.required">Password is required.</span> -->
+                        <!-- <span class="error" ng-show="myForm.pwd.$error.compareTo">  
+                            Passwords don't match.  
+                         </span>    -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phno">Mobile Number</label>
+                        <input type="text" class="form-control" id="phno" placeholder="Enter Mobile Number" name="phno" ng-model="admin.phno">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                    <button class="btn btn-default but" ng-click="adminpostData(admin)">Create Account</button>
+                    <div class="col-md-4"></div>
+                    </div>
+                    </div>
+                </form>
+                <!-- ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
+                    myForm.email.$dirty && myForm.email.$invalid" -->
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+</body>
+</html>
